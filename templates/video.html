@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../js/video.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light mb-auto p-3">
+      <img src="https://www.k-lagan.com/wp-content/uploads/2016/11/AWS.png" class="d-inline-block align-top" height="45rem">
+      <div class="ml-4" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="redirectToCommunity(); return false;">Comunidad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="redirectToProfile(); return false;">Mis videos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" id="center">
+      <h1 id="nombre_video" style="text-align: center;padding-top: 60px;"> </h1>
+
+      <video class="center" id="video" width='1025' height='576' controls> Tu navegador no soporta este tipo de video. </video>
+
+      <div class="row">
+        <div class="col-sm">
+          <a class="nav-link" href="#" onclick="uploadPositive(); return false;"> <img id="vote" src="https://cdn.pixabay.com/photo/2013/07/13/10/22/arrow-157088_960_720.png"> <p id="voto_positivo" style="padding-top: 10px;">  </p> </a>
+        </div>
+        <div class="col-sm">
+          <a class="nav-link" href="#" onclick="uploadNegative(); return false;"> <img id="vote" src="https://i.ya-webdesign.com/images/flechas-rojas-png-10.png"> <p id="voto_negativo" style="padding-top: 8px;">  </p> </a>
+        </div>
+      </div>
+
+      <h3> Comentarios </h3>
+      <div id="comentarios">
+      </div>
+
+      <div class="form-group" style="padding-top: 12px;">
+        <label for="comentario">A&ntilde;adir comentario</label>
+        <input type="text" class="form-control" id="comentario" maxlength="200" required>
+      </div>
+      <button type="button" class="btn btn-primary" id="botonComentar">Comentar</button>
+  </body>
+</html>

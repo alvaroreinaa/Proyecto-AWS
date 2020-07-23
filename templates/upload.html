@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subir video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="../js/upload.js"></script>
+  </head>
+  <body onload="getAWSKeys()">
+    <nav class="navbar navbar-expand-lg navbar-light mb-auto p-3">
+      <img src="https://www.k-lagan.com/wp-content/uploads/2016/11/AWS.png" class="d-inline-block align-top" height="45rem">
+      <div class="ml-4" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="redirectToProfile(); return false;">Mi cuenta</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" id="center">
+      <h1> Subir video </h1>
+      <form onsubmit="setKeyFilename(this);" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="X-Amz-Credential" name="X-Amz-Credential" value="" />
+        <input type="hidden" id="X-Amz-Date" name="X-Amz-Date" value="" />
+        <input type="hidden" id="Policy" name="Policy" value="" />
+        <input type="hidden" id="X-Amz-Signature" name="X-Amz-Signature" value="" />
+
+      	<input type="hidden" id="key" name="key" value="fichero.sln" /><br />
+        <input type="hidden" name="acl" value="public-read" />
+        <input type="hidden" id="successField" name="success_action_redirect" />
+        <input type="hidden" name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
+      	<input type="hidden" id="X-Amz-Security-Token" name="X-Amz-Security-Token" value=""/>
+
+        <div class="form-group">
+          <label for="nombre_video">Nombre del video</label>
+          <input type="text" class="form-control" id="nombre_video" maxlength="40" required>
+        </div>
+
+        <div class="form-group">
+          <label for="etiquetas">Etiquetas del video</label>
+          <input type="text" class="form-control" id="etiquetas" maxlength="75" required>
+        </div>
+
+        <div class="form-group">
+          <p> Seleccione un video para subir:</p>
+          <input type="file" name="file" id="file">
+        </div>
+
+        <div class="form-group">
+          <input type="button" value="Comprobar archivo" name="comprobar" onclick="checkFile()">
+          <a href="#" onclick="checkInformation()"><small> Mas informacion </small></a>
+        </div>
+
+        <input type="submit" value="Subir video" name="submit" id="submit" disabled>
+      </form>
+    </div>
+  </body>
+</html>
