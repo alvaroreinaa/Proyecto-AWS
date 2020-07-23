@@ -11,3 +11,5 @@ Página web que simula una aplicación tipo Youtube realizada con los servicios 
 Cuenta con una barra de búsqueda para buscar según etiquetas o nombre del vídeo. Esta búsqueda es de todos los existentes en la BBDD, ya que no se realiza la carga completa de todos esto en la comunidad, pudiendo así aparecer vídeos que no están en el top 5.
 - En las valoraciones, solo se pueden realizar una voto positivo/negativo por usuario, aunque se puede cambiar a la valoración contraria si lo desea. 
 
+## Nota
+Actualmente las lambdas, RDS, ApiGateway y S3 no existen, pero el código sería exactamente el mismo teniendo que configurar usted los servicios (VPCs, Roles, Security groups,...etc) de AWS y sustituirlos por los míos.
