@@ -12,4 +12,4 @@ Cuenta con una barra de búsqueda para buscar según etiquetas o nombre del víd
 - En las valoraciones, solo se pueden realizar una voto positivo/negativo por usuario, aunque se puede cambiar a la valoración contraria si lo desea. 
 
 ## Nota
-Actualmente las lambdas, RDS, ApiGateway y S3 no existen, pero el código sería exactamente el mismo teniendo que configurar usted los servicios (VPCs, Roles, Security groups,...etc) de AWS y sustituirlos por los míos.
+Actualmente las lambdas, RDS, ApiGateway y S3 no existen, pero el código sería exactamente el mismo teniendo que configurar usted los servicios (VPCs, Roles, Security groups,...etc) de AWS, sustituyendolos por donde tengo yo los míos. 
